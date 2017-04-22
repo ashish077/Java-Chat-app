@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p >simple calculator</p>
+<p>value1:<input type="text" name="val1"  id="val1"></p>
+<p>value2:<input type="text" name="val2" id="val2"></p>
+<p>1.addition 2.subtraction 3.multiplication 4.division</p>
+operation:<input type="text" name="enter" id="op">
+<button type="submit" value="submit"  onclick=myfun()>enter</button>
+<p id="demo"></p>
+
+<script>
+function myfun()
+{
+var x,y,z;
+var rs=1;
+
+x=parseInt(document.getElementById("val1").value);
+y=parseInt(document.getElementById("val2").value);
+z=parseInt(document.getElementById("op").value);
+
+//console.log(z);
+//console.log(x);
+
+switch (z) {
+    case 1:
+        rs=x+y;
+        document.getElementById("demo").innerHTML = "the addition of the two numbers is" +rs;
+		break;
+    case 2:
+        rs=x-y;
+        document.getElementById("demo").innerHTML = "the subtraction of the two numbers is" +rs;
+		break;
+    case 3:
+   rs=x*y;
+document.getElementById("demo").innerHTML = "the multiplication of the two numbers is" +rs;   
+   break;
+    case 4:
+    rs=x/y;
+        document.getElementById("demo").innerHTML = "the division of the two numbers is" +rs;
+		break;
+ 
+    }
+
+
+}
+
+</script>
+
+</body>
+</html>
+
